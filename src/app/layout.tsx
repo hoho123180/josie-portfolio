@@ -1,6 +1,8 @@
+import "../css/reset.css";
+
 import { figTree } from "@/fonts/fonts";
 import type { Metadata } from "next";
-import "./globals.css";
+import "../css/global.css";
 
 export const metadata: Metadata = {
   title: "Create Next App",
