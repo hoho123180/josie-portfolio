@@ -28,6 +28,16 @@
 }
 @media (hover: hover) {
   .container:hover {
-    border-bottom: 1px solid currentColor;
+    position: relative;
+  }
+  .container:hover::before {
+    content: '';
+    height: 1px;
+    position: absolute;
+    background-color: #fff;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    z-index: 1;
   }
 }

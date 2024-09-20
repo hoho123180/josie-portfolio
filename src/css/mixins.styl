@@ -34,5 +34,14 @@ iconSize(size)
   font-size size
   flex-shrink 0
 
-underline()
-  border-bottom 1px solid currentColor
+underline(lineColor)
+  position relative
+  &::before
+    content ''
+    height 1px
+    position absolute
+    background-color lineColor
+    left 0
+    right 0
+    bottom -1px
+    z-index 1
