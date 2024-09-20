@@ -1,0 +1,29 @@
+@import '../../css/variables.styl'
+@import '../../css/fonts.styl'
+@import '../../css/mixins.styl'
+
+.footer
+  width 100%
+  background-color grey1
+  color contentInversePrimary
+  padding-inline 16px
+  height 254px
+
+.container
+  width 100%
+  max-width 1140px
+  margin-inline auto
+  padding-block 29px
+  flexbox(row, space-between, flex-start, 16px)
+
+.footerStart
+  flexbox(row, flex-start, center, 35px)
+
+.footerEnd
+  flexbox(row, flex-start, center, 24px)
+
+.arrowIcon
+  iconSize(20px)
+
+.linkList
+  flexbox(row, flex-start, center, 24px)

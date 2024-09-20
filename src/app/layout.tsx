@@ -9,6 +9,7 @@ import Header from "@/components/Header/Header";
 import { figTree } from "@/fonts/fonts";
 import type { Metadata } from "next";
 import "../css/global.css";
+import Footer from "@/components/Footer/Footer";
 
 
 
@@ -27,6 +28,7 @@ export default function RootLayout({
       <body className={figTree.className}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

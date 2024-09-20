@@ -1,0 +1,28 @@
+.container {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30.17px;
+  letter-spacing: 10%;
+  padding: 12px 12px 12px 0;
+  cursor: pointer;
+  user-select: none;
+  transition: opacity 0.2s;
+  -webkit-tap-highlight-color: transparent;
+  transition: opacity 0.3s, color 0.3s;
+}
+@media (hover: hover) {
+  .container:hover {
+    transition: opacity 0s;
+    opacity: 0.9;
+  }
+}
+.container:active {
+  transition: opacity 0s;
+  opacity: 0.6;
+}
+@media (hover: hover) {
+  .container:hover {
+    transition: opacity 0s, color 0s;
+    color: #1c6de7;
+  }
+}
