@@ -14,12 +14,13 @@ outline()
   inset 0
 
 .container
-  opacityButton()
   position relative
   border-radius 8px
   color contentPrimary
   transition background-color 0.3s, color 0.3s
   background-color transparent
+  &:not(.disabled)
+    opacityButton()
   &[data-size='large']
     H2(600)
     padding 16px 32px
@@ -30,22 +31,33 @@ outline()
     background-color backgroundInversePrimary
     color contentInversePrimary
     transition background-color 0.3s, color 0.3s
+    &.disabled
+      user-select none
+      background-color backgroundStateDisabled
+      color contentDisable
     @media (hover hover)
-      &:hover
+      &:not(.disabled):hover
         transition background-color 0s, color 0s
         background-color accent1
   &[data-type='secondary']
     &::before
       outline()
+    &.disabled
+      user-select none
+      background-color contentDisable
+      color contentDisable
     @media (hover hover)
-      &:hover
+      &:not(.disabled):hover
         background-color backgroundInversePrimary
         color contentInversePrimary
   &[data-type='tertiary']
     &::before
       outline()
       border-color #00000000
+    &.disabled
+      user-select none
+      color contentDisable
     @media (hover hover)
-      &:hover::before
+      &:not(.disabled):hover::before
         transition border-color 0s
         border-color #000
