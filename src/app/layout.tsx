@@ -1,13 +1,16 @@
 import "../css/reset.css";
 
-import { figTree } from "@/fonts/fonts";
-import type { Metadata } from "next";
-import "../css/global.css";
-
 // https://docs.fontawesome.com/web/use-with/react/use-with#getting-font-awesome-css-to-work
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 config.autoAddCss = false
+
+import Header from "@/components/Header/Header";
+import { figTree } from "@/fonts/fonts";
+import type { Metadata } from "next";
+import "../css/global.css";
+
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,6 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={figTree.className}>
+        <Header />
         {children}
       </body>
     </html>

@@ -1,0 +1,77 @@
+.container {
+  cursor: pointer;
+  user-select: none;
+  transition: opacity 0.2s;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  border-radius: 8px;
+  color: #000;
+  transition: background-color 0.3s, color 0.3s;
+  background-color: transparent;
+}
+@media (hover: hover) {
+  .container:hover {
+    transition: opacity 0s;
+    opacity: 0.9;
+  }
+}
+.container:active {
+  transition: opacity 0s;
+  opacity: 0.6;
+}
+.container[data-size='large'] {
+  font-size: 24px;
+  font-weight: 600;
+  padding: 16px 32px;
+}
+.container[data-size='medium'] {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 16px 20px;
+}
+.container[data-type='primary'] {
+  background-color: #000;
+  color: #fff;
+  transition: background-color 0.3s, color 0.3s;
+}
+@media (hover: hover) {
+  .container[data-type='primary']:hover {
+    transition: background-color 0s, color 0s;
+    background-color: #1c6de7;
+  }
+}
+.container[data-type='secondary']::before {
+  content: '';
+  position: absolute;
+  border-radius: 8px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #000;
+  transition: border-color 0.2s;
+  z-index: 1;
+  inset: 0;
+}
+@media (hover: hover) {
+  .container[data-type='secondary']:hover {
+    background-color: #000;
+    color: #fff;
+  }
+}
+.container[data-type='tertiary']::before {
+  content: '';
+  position: absolute;
+  border-radius: 8px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #000;
+  transition: border-color 0.2s;
+  z-index: 1;
+  inset: 0;
+  border-color: rgba(0,0,0,0);
+}
+@media (hover: hover) {
+  .container[data-type='tertiary']:hover::before {
+    transition: border-color 0s;
+    border-color: #000;
+  }
+}

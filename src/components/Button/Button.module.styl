@@ -1,0 +1,51 @@
+@import '../../css/variables.styl'
+@import '../../css/fonts.styl'
+@import '../../css/mixins.styl'
+
+outline()
+  content ''
+  position absolute
+  border-radius 8px
+  border-width 2px
+  border-style solid
+  border-color #000000
+  transition border-color 0.2s
+  z-index 1
+  inset 0
+
+.container
+  opacityButton()
+  position relative
+  border-radius 8px
+  color contentPrimary
+  transition background-color 0.3s, color 0.3s
+  background-color transparent
+  &[data-size='large']
+    H2(600)
+    padding 16px 32px
+  &[data-size='medium']
+    Body(600)
+    padding 16px 20px
+  &[data-type='primary']
+    background-color backgroundInversePrimary
+    color contentInversePrimary
+    transition background-color 0.3s, color 0.3s
+    @media (hover hover)
+      &:hover
+        transition background-color 0s, color 0s
+        background-color accent1
+  &[data-type='secondary']
+    &::before
+      outline()
+    @media (hover hover)
+      &:hover
+        background-color backgroundInversePrimary
+        color contentInversePrimary
+  &[data-type='tertiary']
+    &::before
+      outline()
+      border-color #00000000
+    @media (hover hover)
+      &:hover::before
+        transition border-color 0s
+        border-color #000
