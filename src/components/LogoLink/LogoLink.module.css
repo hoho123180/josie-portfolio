@@ -13,7 +13,6 @@
 @media (hover: hover) {
   .container:hover {
     transition: opacity 0s;
-    opacity: 0.9;
   }
 }
 .container:active {
