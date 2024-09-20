@@ -1,11 +1,16 @@
-import FAIcon from "@/components/FAIcon";
-import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
+import FeatureWorks from "@/components/FeatureWorks/FeatureWorks";
 import styles from "./page.module.css";
+import HeroSection from "@/components/HeroSection/HeroSection";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <FAIcon icon={faThumbsUp} />
-    </div>
+    <main className={styles.main}>
+      <div className={styles.container}>
+        {/* Hero Section */}
+        <HeroSection />
+        {/* Feature Works Section */}
+        <FeatureWorks />
+      </div>
+    </main>
   );
 }

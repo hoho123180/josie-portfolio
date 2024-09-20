@@ -1,0 +1,9 @@
+.main {
+  width: 100%;
+  padding-inline: 16px;
+}
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin-inline: auto;
+}
