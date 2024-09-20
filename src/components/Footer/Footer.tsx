@@ -1,7 +1,10 @@
 import ArrowUpRight from '@/../public/icons/ic-arrow-top-right.svg'
-import { FooterLinks, gmailLink } from '@/configs/links'
+import { behanceLink, FooterLinks, gmailLink, linkedInLink } from '@/configs/links'
+import { faBehance, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { FC } from 'react'
+import A from '../A'
+import IconButton from '../IconButton/IconButton'
 import LogoLink from '../LogoLink/LogoLink'
 import TextLink from '../TextLink/TextLink'
 import styles from './Footer.module.css'
@@ -38,8 +41,13 @@ const Footer: FC<Prop> = ({ }) => {
               <ArrowUpRight className={styles.arrowIcon} />
             }
           />
+          <A href={behanceLink}>
+            <IconButton icon={faBehance} type='secondary' />
+          </A>
+          <A href={linkedInLink}>
+            <IconButton icon={faLinkedin} type='secondary' />
+          </A>
         </div>
-
       </div>
     </footer>
   )
