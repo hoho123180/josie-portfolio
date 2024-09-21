@@ -1,7 +1,7 @@
-import ArrowUpRight from '@/../public/icons/ic-arrow-top-right.svg'
 import { behanceLink, FooterLinks, gmailLink, linkedInLink } from '@/configs/links'
 import { faBehance, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { FC } from 'react'
 import A from '../A'
 import IconButton from '../IconButton/IconButton'
@@ -37,9 +37,7 @@ const Footer: FC<Prop> = ({ }) => {
             href={gmailLink}
             type='primary'
             leadingIcon={faEnvelope}
-            trailingComponent={
-              <ArrowUpRight className={styles.arrowIcon} />
-            }
+            trailingIcon={faArrowRight}
           />
           <A href={behanceLink}>
             <IconButton icon={faBehance} type='secondary' />

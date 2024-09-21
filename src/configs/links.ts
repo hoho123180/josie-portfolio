@@ -12,6 +12,6 @@ export const HeaderLinks = [
 
 export const FooterLinks = [
   { title: 'Resume', href: resumeLink },
-  { title: 'Blogs', href: mediumLink },
+  { title: 'Blog', href: mediumLink },
   { title: 'More Works', href: behanceLink },
 ]
