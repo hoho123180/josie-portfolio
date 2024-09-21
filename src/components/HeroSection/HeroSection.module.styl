@@ -1,6 +1,54 @@
 @import '../../css/variables.styl'
 @import '../../css/fonts.styl'
 @import '../../css/mixins.styl'
+@import '../../css/keyframes.styl'
 
 .container
   border 1px solid #000
+  flexbox(row, flex-start, flex-end, 24px)
+  padding-block 48px
+
+.content
+  flexbox(column, flex-start, stretch, 24px)
+  width 100%
+  border 1px solid red
+
+.heroImageContainer
+  position relative
+  width 100%
+  max-width 520px
+  max-height 400px
+  aspect-ratio 1.3
+
+.box1, .box2, .box3, .box4
+  position absolute
+  animation fade-in 1s forwards
+  opacity 0
+
+.box1
+  width 31.1%
+  aspect-ratio 1.038
+  top 4%
+  left 8.5%
+  animation-delay 0s
+
+.box2
+  width 28.6%
+  aspect-ratio 1.38
+  top 9%
+  right 9.8%
+  animation-delay 0.8s
+
+.box3
+  width 27.9%
+  aspect-ratio 1.133
+  right 0
+  bottom 16.5%
+  animation-delay 1.6s
+
+.box4
+  width 17.1%
+  aspect-ratio  0.84
+  left 6%
+  bottom 10%
+  animation-delay 2.4s
