@@ -1,7 +1,7 @@
 .container {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   gap: 4px;
   position: relative;
@@ -28,6 +28,7 @@
 .container[data-size='large'] {
   font-size: 24px;
   font-weight: 600;
+  letter-spacing: 0.04em;
   padding: 16px 32px;
 }
 .container[data-size='medium'] {

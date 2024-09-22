@@ -16,7 +16,7 @@ interface Prop {
 
 const Button: FC<Prop> = ({ title, type, size, leadingIcon, trailingIcon, leadingIconSize, trailingIconSize, disabled }) => {
   return (
-    <div
+    <button
       className={`${styles.container} ${disabled ? styles.disabled : ''}`}
       data-type={type ?? 'primary'}
       data-size={size ?? 'large'}
@@ -24,7 +24,7 @@ const Button: FC<Prop> = ({ title, type, size, leadingIcon, trailingIcon, leadin
       {leadingIcon && <FAIcon icon={leadingIcon} size={leadingIconSize ?? 20} />}
       {title}
       {trailingIcon && <FAIcon icon={trailingIcon} size={trailingIconSize ?? 20} />}
-    </div>
+    </button>
   )
 }
 
