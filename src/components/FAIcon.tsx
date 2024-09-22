@@ -4,8 +4,10 @@ import { FC } from 'react'
 
 type Prop = {
   icon: IconDefinition
-  size?: 18 | 20 | 24 | 28 | 30 | 36 | 48
+  size?: IconSizes
 }
+
+export type IconSizes = 18 | 20 | 24 | 28 | 30 | 36 | 48
 
 const FAIcon: FC<Prop> = ({ icon, size }) => {
   return (

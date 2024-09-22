@@ -1,6 +1,6 @@
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core'
 import { FC } from 'react'
-import FAIcon from '../FAIcon'
+import FAIcon, { IconSizes } from '../FAIcon'
 import styles from './Button.module.css'
 
 interface Prop {
@@ -9,19 +9,21 @@ interface Prop {
   size?: 'large' | 'medium'
   leadingIcon?: IconDefinition
   trailingIcon?: IconDefinition
+  leadingIconSize?: IconSizes
+  trailingIconSize?: IconSizes
   disabled?: boolean
 }
 
-const Button: FC<Prop> = ({ title, type, size, leadingIcon, trailingIcon, disabled }) => {
+const Button: FC<Prop> = ({ title, type, size, leadingIcon, trailingIcon, leadingIconSize, trailingIconSize, disabled }) => {
   return (
     <div
       className={`${styles.container} ${disabled ? styles.disabled : ''}`}
       data-type={type ?? 'primary'}
       data-size={size ?? 'large'}
     >
-      {leadingIcon && <FAIcon icon={leadingIcon} size={20} />}
+      {leadingIcon && <FAIcon icon={leadingIcon} size={leadingIconSize ?? 20} />}
       {title}
-      {trailingIcon && <FAIcon icon={trailingIcon} size={20} />}
+      {trailingIcon && <FAIcon icon={trailingIcon} size={trailingIconSize ?? 20} />}
     </div>
   )
 }
