@@ -2,6 +2,15 @@
 @import '../../css/fonts.styl'
 @import '../../css/mixins.styl'
 
+innerBg(bgc, initialTranslate = -100%)
+  content ''
+  position absolute
+  inset 0
+  background-color bgc
+  transform translateX(initialTranslate)
+  transition transform 0.5s
+  z-index -1
+
 .container
   flexbox(column, flex-start, stretch, 36px)
   padding-block 80px
@@ -43,11 +52,12 @@
       .imageContainer
         transition outline 0s
         outline 4px solid Black
-      .buttonWrapper[data-color='accent'] button
-        background-color accent1
+      .seal
+        opacity 1
+      .button
         color White
         &::before
-          border-color accent1
+          transform translateX(0%)
 
 .imageContainer
   position relative
@@ -59,6 +69,21 @@
   overflow hidden
   transition outline 0.3s
   aspect-ratio 1.33
+
+.seal
+  position absolute
+  z-index 1
+  background-color backgroundInversePrimary
+  left 0
+  right 0
+  top 50%
+  transform translateY(-50%)
+  centerChild()
+  color contentInversePrimary
+  padding-block 12px
+  H2(600)
+  opacity 0
+  transition opacity 0.5s
 
 .content
   flexbox(column, center, flex-start, 16px)
@@ -80,7 +105,20 @@
 .tagList
   flexbox(row, flex-start, center, 4px)
 
-.buttonWrapper[data-color='accent'] button
-  color accent1
+.button
+  centerChild()
+  padding 16px 20px
+  outline 2px solid Black
+  background-color transparent
+  border-radius 8px
+  overflow hidden
+  position relative
+  transition color 0.3s
+  opacityButton()
+  &[data-color='accent']
+    outline-color accent1
+    color accent1
+    &::before
+      innerBg(accent)
   &::before
-    border-color accent1
+    innerBg(Black)
