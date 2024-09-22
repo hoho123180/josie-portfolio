@@ -1,3 +1,141 @@
 .container {
-  border: 1px solid #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 36px;
+  padding-block: 80px;
+}
+@media (max-width:1200px) {
+  .container {
+    gap: 60px;
+  }
+}
+.workList {
+  width: 100%;
+  display: grid;
+  gap: 36px;
+}
+@media (max-width:1200px) {
+  .workList {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+.worksHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 4px;
+}
+.worksHeader .title {
+  color: #1c6de7;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.worksHeader .divider {
+  height: 2px;
+  background-color: #1c6de7;
+}
+.worksHeader .description {
+  color: #4e8dec;
+  font-size: 16px;
+  font-weight: 400;
+}
+.featureWork {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 24px;
+  padding-right: 24px;
+  width: 100%;
+}
+@media (max-width:1200px) {
+  .featureWork {
+    flex-direction: column;
+    padding-right: 0;
+    max-width: 400px;
+  }
+  .featureWork a {
+    width: 100%;
+  }
+}
+@media (hover: hover) {
+  .featureWork:hover .imageContainer {
+    transition: outline 0s;
+    outline: 4px solid #000;
+  }
+  .featureWork:hover button {
+    background-color: #000;
+    color: #fff;
+  }
+  .featureWork:hover button::before {
+    border-color: #000;
+  }
+  .featureWork:hover .buttonWrapper[data-color='accent'] button {
+    background-color: #1c6de7;
+    color: #fff;
+  }
+  .featureWork:hover .buttonWrapper[data-color='accent'] button::before {
+    border-color: #1c6de7;
+  }
+}
+.imageContainer {
+  position: relative;
+  width: 100%;
+  max-width: 553px;
+  max-height: 416px;
+  outline: 2px solid #ddd;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: outline 0.3s;
+  aspect-ratio: 1.33;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+  max-width: 539px;
+  width: 100%;
+}
+.content h2 {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.content h6 {
+  color: #ca9a3c;
+  font-size: 12px;
+  font-weight: 600;
+}
+.content p {
+  overflow-wrap: break-word;
+  font-size: 16px;
+  font-weight: 400;
+  width: 100%;
+}
+.contentHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+.tagList {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4px;
+}
+.buttonWrapper[data-color='accent'] button {
+  color: #1c6de7;
+}
+.buttonWrapper[data-color='accent'] button::before {
+  border-color: #1c6de7;
 }
