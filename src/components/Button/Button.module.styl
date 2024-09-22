@@ -2,25 +2,25 @@
 @import '../../css/fonts.styl'
 @import '../../css/mixins.styl'
 
-outline()
+innerBg(bgc, initialTranslate = -100%)
   content ''
   position absolute
-  border-radius 8px
-  border-width 2px
-  border-style solid
-  border-color #000000
-  transition border-color 0.2s
-  z-index 1
   inset 0
+  background-color bgc
+  transform translateX(initialTranslate)
+  transition transform 0.5s
+  z-index -1
 
 .container
   flexbox(row, center, center, 4px)
   position relative
   border-radius 8px
-  color contentPrimary
-  transition background-color 0.3s, color 0.3s
   background-color transparent
+  overflow hidden
+  transition color 0.3s, outline 0.3s
   &:not(.disabled)
+    transition color 0.3s, outline 0.3s
+    color contentPrimary
     opacityButton()
   &[data-size='large']
     H2(600)
@@ -29,36 +29,42 @@ outline()
     Body(600)
     padding 16px 20px
   &[data-type='primary']
-    background-color backgroundInversePrimary
     color contentInversePrimary
-    transition background-color 0.3s, color 0.3s
+    &::before
+      innerBg(accent1)
+    &::after
+      innerBg(backgroundInversePrimary, 0%)
     &.disabled
       user-select none
       background-color backgroundStateDisabled
       color contentDisable
     @media (hover hover)
       &:not(.disabled):hover
-        transition background-color 0s, color 0s
-        background-color accent1
+        &::before
+          transform translateX(0%)
+        &::after
+          transform translateX(100%)
   &[data-type='secondary']
-    &::before
-      outline()
+    outline 2px solid Black
+    outline-offset -2px
     &.disabled
       user-select none
       background-color contentDisable
       color contentDisable
+    &::before
+      innerBg(backgroundInversePrimary)
     @media (hover hover)
       &:not(.disabled):hover
-        background-color backgroundInversePrimary
         color contentInversePrimary
+        &::before
+          transform translateX(0%)
   &[data-type='tertiary']
-    &::before
-      outline()
-      border-color #00000000
+    outline 2px solid #00000000
+    transition outline-color 0.3s
     &.disabled
       user-select none
       color contentDisable
     @media (hover hover)
-      &:not(.disabled):hover::before
-        transition border-color 0s
-        border-color #000
+      &:not(.disabled):hover
+        transition outline-color 0s
+        outline 2px solid Black

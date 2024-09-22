@@ -68,13 +68,6 @@
     transition: outline 0s;
     outline: 4px solid #000;
   }
-  .featureWork:hover button {
-    background-color: #000;
-    color: #fff;
-  }
-  .featureWork:hover button::before {
-    border-color: #000;
-  }
   .featureWork:hover .buttonWrapper[data-color='accent'] button {
     background-color: #1c6de7;
     color: #fff;
