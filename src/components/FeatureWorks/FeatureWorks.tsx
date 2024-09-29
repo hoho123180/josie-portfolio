@@ -16,13 +16,13 @@ const FeatureWorks: FC<Prop> = ({ }) => {
         description='Projects below are all conducted by 1 product designer(me), with involvement in discussions and decisions on functionality.'
       />
       <div className={styles.workList}>
-        {Works.core.map(work => <FeatureWork work={work} />)}
+        {Works.core.map(work => <FeatureWork work={work} key={work.title} />)}
       </div>
       <WorksHeader
         title='Other Works'
         description='Including side project and project in WeMo Scooter'
       />
-      {Works.other.map(work => <FeatureWork work={work} />)}
+      {Works.other.map(work => <FeatureWork work={work} key={work.title} />)}
     </div>
   )
 }

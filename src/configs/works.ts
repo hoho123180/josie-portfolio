@@ -5,12 +5,17 @@ const TAG = {
   '2C': '2C',
   'Product roadmap': 'Product roadmap',
   'UIUX': 'UIUX',
+  'UI': 'UI',
   'CSS': 'CSS',
   'AI': 'AI',
   'Web': 'Web',
   '2B': '2B',
   'Saas': 'Saas',
   'core-feature': 'core-feature',
+  'Product Management': 'Product Management',
+  'IP design': 'IP design',
+  'dashboard': 'dashboard',
+  'Graphic': 'Graphic',
   'LABEL': 'LABEL',
 } as const
 
@@ -57,7 +62,32 @@ export const Works: WorkGroups = {
       isWorking: true
     },
   ],
-  other: [],
+  other: [
+    {
+      image: 'portfolio-japan-currency-APP.gif',
+      title: 'Side Project｜JAPAN GO APP',
+      description: 'Helping budget-conscious Taiwanese travelers easily manage their expenses during a busy trip to Japan.',
+      tags: [TAG["0-1"], TAG["user research"], TAG["Product roadmap"]],
+      href: '',
+      isWorking: false
+    },
+    {
+      image: 'portofolio-wemo-annual-campaign.jpg',
+      title: 'ＷeMo｜Xmas Campaign',
+      description: 'Project work was 80% UI and 20% UX, focusing on web and app interface design, event visuals, and event IP design.',
+      tags: [TAG.UI, TAG["IP design"], TAG.Graphic],
+      href: '',
+      isWorking: false
+    },
+    {
+      image: 'portfolio-biketracking.jpg',
+      title: 'ＷeMo｜Bike Tracking System',
+      description: "Designed the 2b dashboard of bike tracking system, planning workflows and interfaces based on stakeholders' requirements.",
+      tags: [TAG["2B"], TAG.Saas, TAG.dashboard],
+      href: '',
+      isWorking: false
+    },
+  ],
 }
 
 export type WorkGroups = {

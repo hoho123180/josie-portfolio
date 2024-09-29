@@ -14,7 +14,6 @@ interface Prop {
 
 const FeatureWork: FC<Prop> = ({ work }) => {
   const { title, description, image, tags, href, isWorking } = work
-  const isMailLink = href.includes('mail.google.com')
   return (
     <div className={styles.featureWork}>
       <div className={styles.imageContainer}>
@@ -23,10 +22,9 @@ const FeatureWork: FC<Prop> = ({ work }) => {
           src={`/images/${image}`}
           fill
         />
-        <div className={styles.seal}>
+        {isWorking && <div className={styles.seal}>
           <span>Working...</span><FAIcon icon={faWrench} size={36} />
-
-        </div>
+        </div>}
       </div>
       <div className={styles.content}>
         <div className={styles.contentHeader}>
