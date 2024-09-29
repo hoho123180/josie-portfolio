@@ -19,11 +19,13 @@ innerBg(bgc, initialTranslate = -100%)
 
 .workList
   width 100%
-  display grid
-  gap 36px
+  flexbox(column, flex-start, center, 36px)
   @media ({mobile} )
-    flex-direction row
-    flex-wrap wrap
+    display grid
+    grid-template-columns repeat(auto-fit, minmax(360px, 1fr))
+    justify-items center
+    justify-content center
+    align-items start
 
 .worksHeader
   flexbox(column, flex-start, stretch, 4px)
@@ -38,13 +40,13 @@ innerBg(bgc, initialTranslate = -100%)
     Body()
 
 .featureWork
+  min-width 320px
   flexbox(row, flex-start, center, 24px)
   padding-right 24px
   width 100%
   @media ({mobile} )
     flex-direction column
     padding-right 0
-    max-width 400px
     a
       width 100%
   @media (hover hover)
@@ -122,3 +124,9 @@ innerBg(bgc, initialTranslate = -100%)
       innerBg(accent)
   &::before
     innerBg(Black)
+
+.otherWorkList
+  display grid
+  grid-template-columns repeat(auto-fit, minmax(360px, 1fr))
+  .featureWork
+    flex-direction column

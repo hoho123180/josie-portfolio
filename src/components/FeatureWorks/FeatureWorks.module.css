@@ -13,13 +13,19 @@
 }
 .workList {
   width: 100%;
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   gap: 36px;
 }
 @media (max-width:1200px) {
   .workList {
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    justify-items: center;
+    justify-content: center;
+    align-items: start;
   }
 }
 .worksHeader {
@@ -45,6 +51,7 @@
   font-weight: 400;
 }
 .featureWork {
+  min-width: 320px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -57,7 +64,6 @@
   .featureWork {
     flex-direction: column;
     padding-right: 0;
-    max-width: 400px;
   }
   .featureWork a {
     width: 100%;
@@ -195,4 +201,11 @@
   transform: translateX(-100%);
   transition: transform 0.5s;
   z-index: -1;
+}
+.otherWorkList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+}
+.otherWorkList .featureWork {
+  flex-direction: column;
 }

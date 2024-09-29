@@ -3,6 +3,7 @@ import styles from './FeatureWorks.module.css'
 import WorksHeader from './WorksHeader'
 import FeatureWork from './FeatureWork'
 import { Works } from '@/configs/works'
+import Button from '../Button/Button'
 
 interface Prop {
 
@@ -22,7 +23,13 @@ const FeatureWorks: FC<Prop> = ({ }) => {
         title='Other Works'
         description='Including side project and project in WeMo Scooter'
       />
-      {Works.other.map(work => <FeatureWork work={work} key={work.title} />)}
+      <div className={styles.otherWorkList}>
+        {Works.other.map(work => <FeatureWork work={work} key={work.title} />)}
+      </div>
+
+      <div className={styles.buttonGroup} style={{ padding: 32, marginInline: 'auto' }}>
+        <Button title='More Visual Works' />
+      </div>
     </div>
   )
 }
