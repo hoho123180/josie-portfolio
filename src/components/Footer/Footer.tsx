@@ -39,12 +39,14 @@ const Footer: FC<Prop> = ({ }) => {
             leadingIcon={faEnvelope}
             trailingIcon={faArrowRight}
           />
-          <A href={behanceLink}>
-            <IconButton icon={faBehance} type='secondary' />
-          </A>
-          <A href={linkedInLink}>
-            <IconButton icon={faLinkedin} type='secondary' />
-          </A>
+          <div className={styles.iconLinkContainer}>
+            <A href={behanceLink}>
+              <IconButton icon={faBehance} type='secondary' />
+            </A>
+            <A href={linkedInLink}>
+              <IconButton icon={faLinkedin} type='secondary' />
+            </A>
+          </div>
         </div>
       </div>
     </footer>

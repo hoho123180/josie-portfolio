@@ -7,7 +7,7 @@
   background-color grey1
   color contentInversePrimary
   padding-inline 16px
-  height 254px
+  min-height 254px
 
 .container
   width 100%
@@ -15,15 +15,29 @@
   margin-inline auto
   padding-block 29px
   flexbox(row, space-between, center, 16px)
+  @media ({mobile} )
+    flex-direction column
+    gap 40px
+    padding-block 24px 80px
 
 .footerStart
   flexbox(row, flex-start, center, 35px)
+  @media ({mobile} )
+    flex-direction column
+    gap 16px
 
 .footerEnd
   flexbox(row, flex-start, center, 24px)
+  @media ({mobile} )
+    flex-direction column
+    gap 16px
 
 .arrowIcon
   iconSize(20px)
 
 .linkList
+  flexbox(row, flex-start, center, 24px)
+  color contentInverseSecondary
+
+.iconLinkContainer
   flexbox(row, flex-start, center, 24px)
