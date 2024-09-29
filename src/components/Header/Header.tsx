@@ -3,6 +3,7 @@ import A from '../A'
 import Button from '../Button/Button'
 import LogoLink from '../LogoLink/LogoLink'
 import styles from './Header.module.css'
+import NavBurger from './NavBurger'
 
 const Header = () => {
   return (
@@ -20,6 +21,7 @@ const Header = () => {
             </A>
           )}
         </ul>
+        <NavBurger />
       </div>
     </header>
   )

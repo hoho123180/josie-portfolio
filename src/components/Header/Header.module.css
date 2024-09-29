@@ -22,8 +22,44 @@
   align-items: center;
   gap: 8px;
 }
-@media (max-width:576px) {
+@media (max-width:1200px) {
   .linkList {
+    display: none;
     gap: 4px;
   }
+}
+@media (max-width: 480px) {
+  .linkList {
+    display: none;
+  }
+}
+.burger {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  display: none;
+}
+@media (max-width:1200px) {
+  .burger {
+    display: inline-flex;
+  }
+}
+.burger .line {
+  position: absolute;
+  border-radius: 100px;
+  width: 28px;
+  height: 4px;
+  background-color: #000;
+  transition: transform 0.5s;
+  transform-origin: middle center;
+}
+.burger .line:first-child {
+  transform: translateY(-8px);
+}
+.burger .line:last-child {
+  transform: translateY(8px);
 }

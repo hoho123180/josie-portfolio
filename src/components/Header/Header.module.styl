@@ -18,4 +18,28 @@
 .linkList
   flexbox(row, flex-start, center, 8px)
   @media ({mobile} )
+    display none
     gap 4px
+  @media (max-width 480px)
+    display none
+
+.burger
+  width 40px
+  height 40px
+  centerChild()
+  position relative
+  display none
+  @media ({mobile} )
+    display inline-flex
+  .line
+    position absolute
+    border-radius 100px
+    width 28px
+    height 4px
+    background-color backgroundInversePrimary
+    transition transform 0.5s
+    transform-origin middle center
+    &:first-child
+      transform translateY(-8px)
+    &:last-child
+      transform translateY(8px)
