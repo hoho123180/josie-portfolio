@@ -16,6 +16,7 @@ const DialogAnimation: FC<Prop> = ({ }) => {
   }
   useEffect(() => {
     if (marquee !== message) {
+      if (marquee.length>message.length) setMarquee(message)
       setTimeout(() => {
         console.log(marquee)
         setMarquee(prev => prev + message[prev.length])
@@ -36,7 +37,7 @@ const DialogAnimation: FC<Prop> = ({ }) => {
 
       {/* 佔位用的 */}
       <div className={`${styles.dialog} ${styles.hide}`}>
-        <span>{marquee || message[0]}</span>
+        <span>{message}</span>
       </div>
     </div>
   )
