@@ -22,7 +22,7 @@ innerBg(bgc, initialTranslate = -100%)
   flexbox(column, flex-start, center, 36px)
   @media ({mobile} )
     display grid
-    grid-template-columns repeat(auto-fit, minmax(360px, 1fr))
+    grid-template-columns repeat(auto-fit, minmax(300px, 1fr))
     justify-items center
     justify-content center
     align-items start
@@ -40,7 +40,7 @@ innerBg(bgc, initialTranslate = -100%)
     Body()
 
 .featureWork
-  min-width 320px
+  min-width 300px
   flexbox(row, flex-start, center, 24px)
   width 100%
   @media ({mobile} )
@@ -105,6 +105,7 @@ innerBg(bgc, initialTranslate = -100%)
 
 .tagList
   flexbox(row, flex-start, center, 4px)
+  flex-wrap wrap
 
 .button
   centerChild()
@@ -126,7 +127,16 @@ innerBg(bgc, initialTranslate = -100%)
 
 .otherWorkList
   display grid
-  grid-template-columns repeat(auto-fit, minmax(360px, 1fr))
+  grid-template-columns repeat(auto-fit, minmax(300px, 1fr))
   gap 24px
+  h2
+    display block
+    flex 1
   .featureWork
     flex-direction column
+
+.buttonGroup
+  @media (max-width 400px)
+    button
+      font-size 16px !important
+      font-weight 600 !important

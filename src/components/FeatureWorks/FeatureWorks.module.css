@@ -22,7 +22,7 @@
 @media (max-width:1200px) {
   .workList {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-items: center;
     justify-content: center;
     align-items: start;
@@ -51,7 +51,7 @@
   font-weight: 400;
 }
 .featureWork {
-  min-width: 320px;
+  min-width: 300px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -152,6 +152,7 @@
   justify-content: flex-start;
   align-items: center;
   gap: 4px;
+  flex-wrap: wrap;
 }
 .button {
   display: flex;
@@ -203,9 +204,19 @@
 }
 .otherWorkList {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 24px;
+}
+.otherWorkList h2 {
+  display: block;
+  flex: 1;
 }
 .otherWorkList .featureWork {
   flex-direction: column;
+}
+@media (max-width: 400px) {
+  .buttonGroup button {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+  }
 }

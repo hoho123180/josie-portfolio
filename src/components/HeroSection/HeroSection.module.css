@@ -99,6 +99,12 @@
   left: 0;
   overflow: hidden;
 }
+@media (max-width: 400px) {
+  .dialog {
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
 .dialog:not(.hide) {
   padding: 16px 24px;
   transform-origin: top left;
@@ -117,9 +123,19 @@
 .buttonGroup {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center;
+  align-items: stretch;
   gap: 16px;
+  flex-wrap: wrap;
+}
+@media (max-width: 404px) {
+  .buttonGroup {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+.buttonGroup button {
+  width: 100%;
 }
 .heroImageContainer {
   position: relative;

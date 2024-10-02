@@ -41,6 +41,9 @@
   top 0
   left 0
   overflow hidden
+  @media (max-width:400px) {
+    H3(600)
+  }
   &:not(.hide)
     padding 16px 24px
     transform-origin top left
@@ -55,7 +58,13 @@
     user-select none
 
 .buttonGroup
-  flexbox(row, flex-start, center, 16px)
+  flexbox(row, center, stretch, 16px)
+  flex-wrap wrap
+  @media (max-width 404px)
+    flex-direction column
+    width 100%
+  button
+    width 100%
 
 .heroImageContainer
   position relative
