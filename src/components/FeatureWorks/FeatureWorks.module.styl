@@ -42,7 +42,6 @@ innerBg(bgc, initialTranslate = -100%)
 .featureWork
   min-width 320px
   flexbox(row, flex-start, center, 24px)
-  padding-right 24px
   width 100%
   @media ({mobile} )
     flex-direction column
@@ -128,5 +127,6 @@ innerBg(bgc, initialTranslate = -100%)
 .otherWorkList
   display grid
   grid-template-columns repeat(auto-fit, minmax(360px, 1fr))
+  gap 24px
   .featureWork
     flex-direction column
