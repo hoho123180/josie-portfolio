@@ -1,9 +1,10 @@
+import { Works } from '@/configs/works'
 import { FC } from 'react'
+import A from '../A'
+import Button from '../Button/Button'
+import FeatureWork from './FeatureWork'
 import styles from './FeatureWorks.module.css'
 import WorksHeader from './WorksHeader'
-import FeatureWork from './FeatureWork'
-import { Works } from '@/configs/works'
-import Button from '../Button/Button'
 
 interface Prop {
 
@@ -28,7 +29,9 @@ const FeatureWorks: FC<Prop> = ({ }) => {
       </div>
 
       <div className={styles.buttonGroup} style={{ padding: 32, marginInline: 'auto' }}>
-        <Button title='More Visual Works' />
+        <A href='https://www.behance.net/josie-chen'>
+          <Button title='More Visual Works' />
+        </A>
       </div>
     </div>
   )

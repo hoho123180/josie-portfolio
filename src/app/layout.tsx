@@ -5,11 +5,12 @@ import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 config.autoAddCss = false
 
+import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import { figTree } from "@/fonts/fonts";
+import { Providers } from "@/providers/Providers";
 import type { Metadata } from "next";
 import "../css/global.css";
-import Footer from "@/components/Footer/Footer";
 
 
 
@@ -26,9 +27,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={figTree.className}>
-        <Header />
-        {children}
-        <Footer />
+        <Providers>
+          <Header />
+          {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

@@ -29,6 +29,7 @@
   centerChild()
   position relative
   display none
+  opacityButton()
   @media ({mobile} )
     display inline-flex
   .line
@@ -43,3 +44,32 @@
       transform translateY(-8px)
     &:last-child
       transform translateY(8px)
+
+.navModal
+  display none
+  background-color #000000cc
+  position fixed
+  top 0
+  bottom 0
+  left 0
+  right 0
+  backdrop-filter blur(20px)
+  &.show
+    display block
+  header
+    padding-inline 16px
+    flexbox(row, flex-end, center)
+    color contentInversePrimary
+    height 106px
+
+.navModalContent
+  padding-top 48px
+  flexbox(column, flex-start, stretch, 36px)
+.closeButton
+  opacityButton()
+.navLinkMobile
+  padding-block 16px
+  color contentInversePrimary
+  H2()
+  opacityButton()
+  centerChild()
