@@ -12,7 +12,7 @@ interface Prop {
 }
 
 const NavBurger: FC<Prop> = ({ }) => {
-  const [isNavModalOpen, setIsNavModalOpen] = useState(true);
+  const [isNavModalOpen, setIsNavModalOpen] = useState(false);
   const toggleBurger = () => setIsNavModalOpen(prev => !prev)
   return (
     <>
