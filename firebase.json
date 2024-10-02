@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "josie-portfolio",
+    "site": "josie-chen",
     "public": "out",
     "ignore": [
       "firebase.json",
