@@ -11,6 +11,7 @@ import { figTree } from "@/fonts/fonts";
 import { Providers } from "@/providers/Providers";
 import type { Metadata } from "next";
 import "../css/global.css";
+import BG from "@/components/BG/BG";
 
 
 
@@ -29,6 +30,7 @@ export default function RootLayout({
       <body className={figTree.className}>
         <Providers>
           <Header />
+          <BG />
           {children}
           <Footer />
         </Providers>
