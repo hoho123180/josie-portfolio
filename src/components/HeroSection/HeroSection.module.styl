@@ -58,10 +58,11 @@
     user-select none
 
 .buttonGroup
-  flexbox(row, center, stretch, 16px)
+  flexbox(row, flex-start, stretch, 16px)
   flex-wrap wrap
   @media (max-width 404px)
     flex-direction column
+    justify-content center
     width 100%
   button
     width 100%
