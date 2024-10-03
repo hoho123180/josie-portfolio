@@ -56,8 +56,8 @@ export const Works: WorkGroups = {
     {
       image: 'portfolio-cake-ats.png',
       title: 'Cake Applicants Tracking System ',
-      description: 'DescriptionDescriptionDescriptionDescriptionDescriptionDescriptionDescription',
-      tags: [TAG.LABEL, TAG.LABEL, TAG.LABEL],
+      description: 'Redesigned the legacy ATS system and integrated it into the CTM Dashboard framework, creating an improved experience that allows employers to manage jobs, talent, applications, and interviews more easily.',
+      tags: [TAG["2B"], TAG.Saas, TAG["core-feature"]],
       href: '',
       isWorking: true
     },
@@ -68,7 +68,7 @@ export const Works: WorkGroups = {
       title: 'Side Project｜JAPAN GO APP',
       description: 'Helping budget-conscious Taiwanese travelers easily manage their expenses during a busy trip to Japan.',
       tags: [TAG["0-1"], TAG["user research"], TAG["Product roadmap"]],
-      href: '',
+      href: 'https://docs.google.com/presentation/d/1zNfDfN8v-gyBbybnRFXbf3hIGwU3lVyvioB0Qv-8sBU/edit?usp=sharing',
       isWorking: false
     },
     {
@@ -76,7 +76,7 @@ export const Works: WorkGroups = {
       title: 'ＷeMo｜Xmas Campaign',
       description: 'Project work was 80% UI and 20% UX, focusing on web and app interface design, event visuals, and event IP design.',
       tags: [TAG.UI, TAG["IP design"], TAG.Graphic],
-      href: '',
+      href: 'https://www.behance.net/gallery/133904873/APPWEB-Xmas-Campaign-UI',
       isWorking: false
     },
     {
@@ -84,7 +84,7 @@ export const Works: WorkGroups = {
       title: 'ＷeMo｜Bike Tracking System',
       description: "Designed the 2b dashboard of bike tracking system, planning workflows and interfaces based on stakeholders' requirements.",
       tags: [TAG["2B"], TAG.Saas, TAG.dashboard],
-      href: '',
+      href: 'https://docs.google.com/presentation/d/1E_WAXmgm04Vt5ymxTiTxRy7g31jPq82ZYUoV7oXUYk8/edit?usp=sharing',
       isWorking: false
     },
   ],
