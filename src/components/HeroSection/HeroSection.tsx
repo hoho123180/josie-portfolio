@@ -6,6 +6,7 @@ import A from '../A'
 import Button from '../Button/Button'
 import DialogAnimation from './DialogAnimation'
 import styles from './HeroSection.module.css'
+import { gmailLink, resumeLink } from '@/configs/links'
 
 interface Prop {
 
@@ -35,14 +36,14 @@ const HeroSection: FC<Prop> = ({ }) => {
         </p>
 
         <div className={styles.buttonGroup}>
-          <A><Button
+          <A href={resumeLink}><Button
             title='Download Resume'
             trailingIcon={faArrowDown}
             trailingIconSize={24}
             size='medium'
             type='primary'
           /></A>
-          <A><Button
+          <A href={gmailLink}><Button
             title='Contact Me'
             trailingIcon={faEnvelope}
             trailingIconSize={24}
