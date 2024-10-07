@@ -16,10 +16,10 @@ const DialogAnimation: FC<Prop> = ({ }) => {
   }
   useEffect(() => {
     if (marquee !== message) {
-      if (marquee.length>message.length) setMarquee(message)
+      if (marquee.length > message.length) setMarquee(message)
       setTimeout(() => {
         console.log(marquee)
-        setMarquee(prev => prev + message[prev.length])
+        setMarquee(prev => prev + (message[prev.length] ?? ''))
       }, marquee === '' ? 140 : 70);
     }
   }, [render, marquee])
