@@ -7,6 +7,11 @@
   background-color #FFFFFF33
   backdrop-filter blur(40px)
   padding-inline 16px
+  position fixed
+  top 0px
+  left 0
+  right 0
+  z-index 100
 
 .container
   width 100%
@@ -65,8 +70,10 @@
 .navModalContent
   padding-top 48px
   flexbox(column, flex-start, stretch, 36px)
+
 .closeButton
   opacityButton()
+
 .navLinkMobile
   padding-block 16px
   color contentInversePrimary
