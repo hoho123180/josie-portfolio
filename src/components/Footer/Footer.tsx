@@ -1,4 +1,9 @@
-import { behanceLink, FooterLinks, gmailLink, linkedInLink } from '@/configs/links'
+import {
+  behanceLink,
+  FooterLinks,
+  gmailLink,
+  linkedInLink,
+} from '@/configs/links'
 import { faBehance, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
@@ -9,25 +14,18 @@ import LogoLink from '../LogoLink/LogoLink'
 import TextLink from '../TextLink/TextLink'
 import styles from './Footer.module.css'
 
-interface Prop {
+interface Prop {}
 
-}
-
-const Footer: FC<Prop> = ({ }) => {
+const Footer: FC<Prop> = ({}) => {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
-
         <div className={styles.footerStart}>
           <LogoLink />
           <ul className={styles.linkList}>
-            {FooterLinks.map(({ title, href }) =>
-              <TextLink
-                key={title}
-                type='secondary'
-                {...{ title, href }}
-              />
-            )}
+            {FooterLinks.map(({ title, href }) => (
+              <TextLink key={title} type='secondary' {...{ title, href }} />
+            ))}
           </ul>
         </div>
 

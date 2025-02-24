@@ -14,16 +14,28 @@ interface Prop {
   disabled?: boolean
 }
 
-const Button: FC<Prop> = ({ title, type, size, leadingIcon, trailingIcon, leadingIconSize, trailingIconSize, disabled }) => {
+const Button: FC<Prop> = ({
+  title,
+  type,
+  size,
+  leadingIcon,
+  trailingIcon,
+  leadingIconSize,
+  trailingIconSize,
+  disabled,
+}) => {
   return (
     <button
       className={`${styles.container} ${disabled ? styles.disabled : ''}`}
       data-type={type ?? 'primary'}
-      data-size={size ?? 'large'}
-    >
-      {leadingIcon && <FAIcon icon={leadingIcon} size={leadingIconSize ?? 20} />}
+      data-size={size ?? 'large'}>
+      {leadingIcon && (
+        <FAIcon icon={leadingIcon} size={leadingIconSize ?? 20} />
+      )}
       {title}
-      {trailingIcon && <FAIcon icon={trailingIcon} size={trailingIconSize ?? 20} />}
+      {trailingIcon && (
+        <FAIcon icon={trailingIcon} size={trailingIconSize ?? 20} />
+      )}
     </button>
   )
 }

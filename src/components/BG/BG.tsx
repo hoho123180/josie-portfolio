@@ -1,13 +1,21 @@
 import Image from 'next/image'
 import { FC } from 'react'
 
-interface Prop {
+interface Prop {}
 
-}
-
-const BG: FC<Prop> = ({ }) => {
+const BG: FC<Prop> = ({}) => {
   return (
-    <div style={{ width: '200%', maxWidth: 2396, minWidth: 1400, position: 'absolute', top: 0, left: '50%', transform: 'translateX(-50%)', zIndex: -1 }}>
+    <div
+      style={{
+        width: '200%',
+        maxWidth: 2396,
+        minWidth: 1400,
+        position: 'absolute',
+        top: 0,
+        left: '50%',
+        transform: 'translateX(-50%)',
+        zIndex: -1,
+      }}>
       <Image
         alt='bg-ellipse large'
         src={'/images/bg-L.webp'}

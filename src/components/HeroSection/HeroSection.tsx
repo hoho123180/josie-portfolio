@@ -8,11 +8,9 @@ import DialogAnimation from './DialogAnimation'
 import styles from './HeroSection.module.css'
 import { gmailLink, resumeLink } from '@/configs/links'
 
-interface Prop {
+interface Prop {}
 
-}
-
-const HeroSection: FC<Prop> = ({ }) => {
+const HeroSection: FC<Prop> = ({}) => {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
@@ -28,30 +26,35 @@ const HeroSection: FC<Prop> = ({ }) => {
         </header>
 
         <h1>
-          I&apos;m Josie Chen - focusing on creating intuitive, impactful designs
+          I&apos;m Josie Chen - focusing on creating intuitive, impactful
+          designs
         </h1>
 
         <p>
-          Senior product designer with 5 years work experience, expertise in managing complex B2C and B2B projects from concept to launch.
+          Senior product designer with 5 years work experience, expertise in
+          managing complex B2C and B2B projects from concept to launch.
         </p>
 
         <div className={styles.buttonGroup}>
-          <A href={resumeLink}><Button
-            title='Download Resume'
-            trailingIcon={faArrowDown}
-            trailingIconSize={24}
-            size='medium'
-            type='primary'
-          /></A>
-          <A href={gmailLink}><Button
-            title='Contact Me'
-            trailingIcon={faEnvelope}
-            trailingIconSize={24}
-            size='medium'
-            type='secondary'
-          /></A>
+          <A href={resumeLink}>
+            <Button
+              title='Download Resume'
+              trailingIcon={faArrowDown}
+              trailingIconSize={24}
+              size='medium'
+              type='primary'
+            />
+          </A>
+          <A href={gmailLink}>
+            <Button
+              title='Contact Me'
+              trailingIcon={faEnvelope}
+              trailingIconSize={24}
+              size='medium'
+              type='secondary'
+            />
+          </A>
         </div>
-
       </div>
       <div className={styles.heroImageContainer}>
         <Image

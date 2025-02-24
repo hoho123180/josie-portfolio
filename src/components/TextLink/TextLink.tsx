@@ -13,13 +13,16 @@ interface Prop {
   trailingComponent?: ReactNode
 }
 
-const TextLink: FC<Prop> = ({ title, href, type, leadingIcon, trailingIcon, trailingComponent }) => {
+const TextLink: FC<Prop> = ({
+  title,
+  href,
+  type,
+  leadingIcon,
+  trailingIcon,
+  trailingComponent,
+}) => {
   return (
-    <A
-      href={href}
-      className={styles.container}
-      data-type={type ?? 'primary'}
-    >
+    <A href={href} className={styles.container} data-type={type ?? 'primary'}>
       {leadingIcon && <FAIcon icon={leadingIcon} size={20} />}
       <span>{title}</span>
       {trailingIcon && <FAIcon icon={trailingIcon} size={20} />}

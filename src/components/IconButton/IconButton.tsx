@@ -19,9 +19,8 @@ const IconButton: FC<Prop> = ({ icon, type, size, disabled }) => {
         minWidth: size ?? 32,
         width: size ?? 32,
         minHeight: size ?? 32,
-        height: size ?? 32
-      }}
-    >
+        height: size ?? 32,
+      }}>
       <FAIcon icon={icon} size={sizeMap[size ?? 32]} />
     </div>
   )

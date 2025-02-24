@@ -2,11 +2,7 @@
   "hosting": {
     "site": "josie-chen",
     "public": "out",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       {
         "source": "**",
@@ -15,4 +11,3 @@
     ]
   }
 }
-

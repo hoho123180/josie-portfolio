@@ -10,16 +10,12 @@ interface Prop {
 }
 
 const Tag: FC<Prop> = ({ title, isButton, isWarning, detectSelectedTag }) => {
-
-  const handleClick = () => {
-
-  }
+  const handleClick = () => {}
 
   return (
     <div
       className={`${styles.container} ${isButton ? styles.button : ''} ${isWarning ? styles.warning : ''}`}
-      onClick={handleClick}
-    >
+      onClick={handleClick}>
       {title}
     </div>
   )

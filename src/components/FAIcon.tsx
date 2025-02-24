@@ -19,9 +19,8 @@ const FAIcon: FC<Prop> = ({ icon, size }) => {
         minWidth: size ?? '1em',
         width: size ?? '1em',
         minHeight: size ?? '1em',
-        height: size ?? '1em'
-      }}
-    >
+        height: size ?? '1em',
+      }}>
       <FontAwesomeIcon
         icon={icon}
         style={{
