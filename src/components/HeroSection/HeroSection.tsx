@@ -1,12 +1,13 @@
+import { gmailLink, resumeLink } from '@/configs/links'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
 import Image from 'next/image'
 import { FC } from 'react'
 import A from '../A'
 import Button from '../Button/Button'
+import RotatingText from '../RotatingText/RotatingText'
 import DialogAnimation from './DialogAnimation'
 import styles from './HeroSection.module.css'
-import { gmailLink, resumeLink } from '@/configs/links'
 
 interface Prop {}
 
@@ -16,8 +17,8 @@ const HeroSection: FC<Prop> = ({}) => {
       <div className={styles.content}>
         <header className={styles.heroHeader}>
           <Image
-            width={100}
-            height={100}
+            width={80}
+            height={80}
             loading='eager'
             alt="josie's selfi"
             src={'/images/josie-profile-photo.png'}
@@ -25,10 +26,27 @@ const HeroSection: FC<Prop> = ({}) => {
           <DialogAnimation />
         </header>
 
-        <h1>
+        {/* <h1>
           I&apos;m Josie Chen - focusing on creating intuitive, impactful
           designs
-        </h1>
+        </h1> */}
+
+        <h1>Hi! I&apos;m Josie Chen.</h1>
+
+        <div className={styles.h2Group}>
+          <h2>I focusing on creating</h2>
+          <RotatingText
+            texts={['Intuitive', 'Impactful', 'User-centric', ' Data-driven']}
+            mainClassName={styles.rotatingText}
+            initial={{ y: '100%' }}
+            animate={{ y: 0 }}
+            exit={{ y: '-120%' }}
+            staggerDuration={0.025}
+            transition={{ type: 'spring', damping: 30, stiffness: 400 }}
+            rotationInterval={2000}
+          />
+          <h2>designs</h2>
+        </div>
 
         <p>
           Senior product designer with 5 years work experience, expertise in

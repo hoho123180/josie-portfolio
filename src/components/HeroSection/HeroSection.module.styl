@@ -11,48 +11,56 @@
     align-items center
 
 .content
-  flexbox(column, flex-start, stretch, 24px)
+  flexbox(column, flex-start, center, 24px)
   @media ({mobile} )
     align-items center
   width 100%
   padding 36px 0
-  @media ({mobile} )
-    text-align center
+  text-align center
   .heroHeader
     flexbox(row, flex-start, flex-end, 12px)
   h1
     Display1(700)
     color Black
+  .h2Group
+    flexbox(row, center, center, 8px)
+    H2(600)
   p
-    H2()
+    H3()
     color grey1
+
+.rotatingText
+  background-color accent-light
+  color accent1
+  padding 4px 12px
+  border-radius 8px
+  overflow hidden
+  justify-content center
 
 .dialogWrapper
   position relative
 
 .dialog
-  outline 4px solid accent2
+  outline 4px solid accent1
   outline-offset -4px
-  padding 16px 24px
+  padding 12px 24px
   border-radius 0px 32px 32px 32px
-  color accent2
+  color accent1
   H2(600)
   position absolute
   top 0
   left 0
   overflow hidden
-  @media (max-width:400px) {
+  @media (max-width 400px)
     H3(600)
-  }
   &:not(.hide)
-    padding 16px 24px
+    padding 12px 24px
     transform-origin top left
     span
       white-space nowrap
       overflow hidden
   &.hide
-    padding 16px 24px
-    padding 16px 24px
+    padding 12px 24px
     position relative
     opacity 0
     user-select none
@@ -73,6 +81,9 @@
   max-width 520px
   max-height 400px
   aspect-ratio 1.3
+  display none
+  @media ({mobile} )
+    display block
 
 .box1, .box2, .box3, .box4
   position absolute
