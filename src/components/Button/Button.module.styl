@@ -68,3 +68,15 @@ innerBg(bgc, initialTranslate = -100%)
       &:not(.disabled):hover
         transition outline-color 0s
         outline 2px solid Black
+  &[data-forceColor='true']
+    outline-color currentColor !important
+    color currentColor
+    span
+      color currentColor
+    &::before
+      innerBg(currentColor)
+    @media (hover hover)
+      &:not(.disabled):hover
+        color currentColor
+        span
+          color contentInversePrimary !important

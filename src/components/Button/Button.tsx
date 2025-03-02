@@ -12,6 +12,7 @@ interface Prop {
   leadingIconSize?: IconSizes
   trailingIconSize?: IconSizes
   disabled?: boolean
+  forceColor?: string
 }
 
 const Button: FC<Prop> = ({
@@ -23,16 +24,18 @@ const Button: FC<Prop> = ({
   leadingIconSize,
   trailingIconSize,
   disabled,
+  forceColor,
 }) => {
   return (
     <button
       className={`${styles.container} ${disabled ? styles.disabled : ''}`}
       data-type={type ?? 'primary'}
-      data-size={size ?? 'large'}>
+      data-size={size ?? 'large'}
+      data-forceColor={Boolean(forceColor !== undefined)}>
       {leadingIcon && (
         <FAIcon icon={leadingIcon} size={leadingIconSize ?? 20} />
       )}
-      {title}
+      <span>{title}</span>
       {trailingIcon && (
         <FAIcon icon={trailingIcon} size={trailingIconSize ?? 20} />
       )}
