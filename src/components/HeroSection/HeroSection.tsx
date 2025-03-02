@@ -33,19 +33,21 @@ const HeroSection: FC<Prop> = ({}) => {
 
         <h1>Hi! I&apos;m Josie Chen.</h1>
 
-        <div className={styles.h2Group}>
-          <h2>I focusing on creating</h2>
-          <RotatingText
-            texts={['Intuitive', 'Impactful', 'User-centric', ' Data-driven']}
-            mainClassName={styles.rotatingText}
-            initial={{ y: '100%' }}
-            animate={{ y: 0 }}
-            exit={{ y: '-120%' }}
-            staggerDuration={0.025}
-            transition={{ type: 'spring', damping: 30, stiffness: 400 }}
-            rotationInterval={2000}
-          />
-          <h2>designs</h2>
+        <div className={styles.subtitleGroup}>
+          <span>I focusing on creating</span>
+          <span className={styles.noWrap}>
+            <RotatingText
+              texts={['Intuitive', 'Impactful', 'User-centric', ' Data-driven']}
+              mainClassName={styles.rotatingText}
+              initial={{ y: '100%' }}
+              animate={{ y: 0 }}
+              exit={{ y: '-120%' }}
+              staggerDuration={0.025}
+              transition={{ type: 'spring', damping: 30, stiffness: 400 }}
+              rotationInterval={3000}
+            />
+            <span>designs</span>
+          </span>
         </div>
 
         <p>
@@ -74,7 +76,7 @@ const HeroSection: FC<Prop> = ({}) => {
           </A>
         </div>
       </div>
-      <div className={styles.heroImageContainer}>
+      {/* <div className={styles.heroImageContainer}>
         <Image
           fill
           loading='eager'
@@ -113,7 +115,7 @@ const HeroSection: FC<Prop> = ({}) => {
             src={'/images/4Code.png'}
           />
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }

@@ -180,6 +180,11 @@
   transition: opacity 0s;
   opacity: 0.6;
 }
+@media (max-width:1200px) {
+  .button {
+    width: 100%;
+  }
+}
 .button[data-color='accent'] {
   outline-color: #1c6de7;
   color: #1c6de7;

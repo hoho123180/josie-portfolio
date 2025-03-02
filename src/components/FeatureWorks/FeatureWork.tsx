@@ -1,9 +1,10 @@
 import { gmailLink } from '@/configs/links'
 import { Work } from '@/configs/works'
-import { faWrench } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight, faWrench } from '@fortawesome/free-solid-svg-icons'
 import Image from 'next/image'
 import { FC } from 'react'
 import A from '../A'
+import Button from '../Button/Button'
 import FAIcon from '../FAIcon'
 import Tag from '../Tag/Tag'
 import styles from './FeatureWorks.module.css'
@@ -43,12 +44,20 @@ const FeatureWork: FC<Prop> = ({ work }) => {
             <Tag key={tag} title={tag} isButton />
           ))}
         </ul>
-        <A href={isWorking ? gmailLink : href}>
-          <button
+        <A href={isWorking ? gmailLink : href} style={{ color: '#1C6DE7' }}>
+          <Button
+            type={'secondary'}
+            trailingIconSize={24}
+            trailingIcon={isWorking ? undefined : faArrowRight}
+            size='medium'
+            forceColor={isWorking ? '#1C6DE7' : undefined}
+            title={isWorking ? 'Contact to learn more detail' : 'See More'}
+          />
+          {/* <button
             className={styles.button}
             data-color={isWorking ? 'accent' : ''}>
             {isWorking ? 'Contact to learn more detail' : 'See More'}
-          </button>
+          </button> */}
         </A>
       </div>
     </div>

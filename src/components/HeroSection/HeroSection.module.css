@@ -32,11 +32,12 @@
 }
 .container {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
   gap: 24px;
   padding-block: 48px;
+  min-height: 800px;
 }
 @media (max-width:1200px) {
   .container {
@@ -72,25 +73,39 @@
   letter-spacing: 0.04em;
   color: #000;
 }
-.content .h2Group {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  font-size: 24px;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-}
 .content p {
   font-size: 18px;
   font-weight: 400;
   color: #4b4b4b;
 }
+.subtitleGroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+@media (max-width: 580px) {
+  .subtitleGroup {
+    flex-direction: column;
+  }
+}
+.subtitleGroup .noWrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: nowrap;
+}
 .rotatingText {
-  background-color: #edf4fd;
+  background-color: transparent;
   color: #1c6de7;
-  padding: 4px 12px;
+  padding: 4px 4px;
   border-radius: 8px;
   overflow: hidden;
   justify-content: center;
