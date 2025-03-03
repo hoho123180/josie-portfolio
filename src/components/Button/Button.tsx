@@ -31,7 +31,7 @@ const Button: FC<Prop> = ({
       className={`${styles.container} ${disabled ? styles.disabled : ''}`}
       data-type={type ?? 'primary'}
       data-size={size ?? 'large'}
-      data-forceColor={Boolean(forceColor !== undefined)}>
+      data-force-color={Boolean(forceColor !== undefined)}>
       {leadingIcon && (
         <FAIcon icon={leadingIcon} size={leadingIconSize ?? 20} />
       )}

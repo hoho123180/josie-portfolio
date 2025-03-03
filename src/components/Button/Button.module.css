@@ -112,14 +112,14 @@
     outline: 2px solid #000;
   }
 }
-.container[data-forceColor='true'] {
+.container[data-force-color='true'] {
   outline-color: currentColor !important;
   color: currentColor;
 }
-.container[data-forceColor='true'] span {
+.container[data-force-color='true'] span {
   color: currentColor;
 }
-.container[data-forceColor='true']::before {
+.container[data-force-color='true']::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -129,10 +129,10 @@
   z-index: -1;
 }
 @media (hover: hover) {
-  .container[data-forceColor='true']:not(.disabled):hover {
+  .container[data-force-color='true']:not(.disabled):hover {
     color: currentColor;
   }
-  .container[data-forceColor='true']:not(.disabled):hover span {
+  .container[data-force-color='true']:not(.disabled):hover span {
     color: #fff !important;
   }
 }
