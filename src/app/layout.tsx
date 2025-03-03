@@ -5,13 +5,13 @@ import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 
+import BG from '@/components/BG/BG'
 import Footer from '@/components/Footer/Footer'
 import Header from '@/components/Header/Header'
 import { figTree } from '@/fonts/fonts'
 import { Providers } from '@/providers/Providers'
 import type { Metadata } from 'next'
 import '../css/global.css'
-import BG from '@/components/BG/BG'
 
 export const metadata: Metadata = {
   title: 'Josie Chen',
@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={figTree.className}>
+      <body className={figTree.className} suppressHydrationWarning>
         <Providers>
           <Header />
           <BG />
